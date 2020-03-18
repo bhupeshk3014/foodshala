@@ -1,0 +1,9 @@
+.button {
+  float: right;
+}
+
+.box {
+  width: 30%;
+  min-width: 300px;
+  min-height: 300px;
+}

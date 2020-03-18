@@ -1,0 +1,13 @@
+img {
+  height: 150px;
+  width: 210px;
+}
+.button {
+  float: right;
+}
+
+.box {
+  width: 33%;
+  min-width: 300px;
+  min-height: 300px;
+}
