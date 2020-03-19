@@ -47,7 +47,7 @@ const Menu = ({ name, cust_id, rest_id, isSignedIn, items }) => {
                     <Item
                       key={i}
                       dish={items[i].dish}
-                      type="no"
+                      type="-"
                       price={items[i].price}
                       isSignedIn={isSignedIn}
                       cust_id={cust_id}

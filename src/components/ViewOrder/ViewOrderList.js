@@ -8,9 +8,10 @@ const ViewOrderList = ({ orderlist }) => {
         return (
           <ViewOrder
             key={i}
-            id={orderlist[i].id}
+            rest_id={orderlist[i].restaurant_id}
+            cust_id={orderlist[i].customer_id}
             name={orderlist[i].name}
-            items={orderlist[i].items}
+            order_id={orderlist[i].order_id}
           />
         );
       })}

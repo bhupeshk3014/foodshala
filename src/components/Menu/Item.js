@@ -28,7 +28,7 @@ class Item extends Component {
     const { dish, type, price, isSignedIn } = this.props;
     const add = this.state.selected === true ? "Added" : "Add";
     if (isSignedIn) {
-      if (type !== "no") {
+      if (type !== "-") {
         return (
           <tr>
             <td className="pv3 pr3 bb b--black-20">{dish}</td>

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import CardList from "../components/CardList/CardList";
 import MenuList from "../components/Menu/MenuList";
-import { orderlist } from "../orderlist";
 import SearchBox from "../components/SearchBox/SearchBox";
 import RLogin from "../components/RLogin/RLogin";
 import Order from "../components/Order/Order";
@@ -101,6 +100,10 @@ class App extends Component {
     this.setState({ beveragesMenu: beverages });
   };
 
+  loadOrderList = orderlist => {
+    this.setState({ orderlist: orderlist });
+  };
+
   componentDidMount() {
     fetch("http://localhost:3000/restaurant")
       .then(response => {
@@ -110,9 +113,7 @@ class App extends Component {
         this.setState({ restaurants: restaurant });
       });
 
-    this.setState({
-      orderlist: orderlist
-    });
+    // this.setState({ orderlist: orderlist });
   }
 
   onSearchChange = event => {
@@ -214,7 +215,12 @@ class App extends Component {
         ) : route === "order" ? (
           <Order />
         ) : route === "restauranthome" ? (
-          <RLogin rname={restaurant.rname} onRouteChange={this.onRouteChange} />
+          <RLogin
+            loadOrderList={this.loadOrderList}
+            rname={restaurant.rname}
+            rest_id={restaurant.id}
+            onRouteChange={this.onRouteChange}
+          />
         ) : route === "vieworder" ? (
           <Scroll>
             <ViewOrderList orderlist={orderlist} />
