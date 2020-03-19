@@ -223,7 +223,7 @@ class App extends Component {
           />
         ) : route === "vieworder" ? (
           <Scroll>
-            <ViewOrderList orderlist={orderlist} />
+            <ViewOrderList rest_id={restaurant.id} orderlist={orderlist} />
           </Scroll>
         ) : route === "addmenu" ? (
           <AddMenu rest_id={restaurant.id} onRouteChange={this.onRouteChange} />

@@ -75,7 +75,7 @@ class Menu extends Component {
           </div>
           <p
             onClick={this.onCloseButtonChange}
-            className="f6 link dim ph3 pv2 tc mb2 dib white bg-dark-green pointer mt2"
+            className="f6 link dim ph3 pv2 tc mb2 dib white bg-dark-red pointer mt2"
           >
             CLOSE
           </p>

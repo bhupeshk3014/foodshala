@@ -3,13 +3,14 @@ import React, { Component } from "react";
 class RLogin extends Component {
   onViewOrderChange = props => {
     const { rest_id } = this.props;
-    // const res_id = rest_id.rest_id;
     fetch(`http://localhost:3000/vieworder/orderitem/${rest_id}`)
       .then(response => {
         return response.json();
       })
       .then(orderlist => {
-        if (orderlist.length) {
+        if (orderlist === "Not found") {
+          this.props.loadOrderList([]);
+        } else {
           this.props.loadOrderList(orderlist);
         }
       });
