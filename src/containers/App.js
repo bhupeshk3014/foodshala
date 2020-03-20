@@ -213,7 +213,7 @@ class App extends Component {
             </ScrollMenu>
           </div>
         ) : route === "order" ? (
-          <Order />
+          <Order onRouteChange={this.onRouteChange} />
         ) : route === "restauranthome" ? (
           <RLogin
             loadOrderList={this.loadOrderList}
