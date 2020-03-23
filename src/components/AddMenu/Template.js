@@ -35,7 +35,7 @@ class Template extends Component {
       })
         .then(response => response.json())
         .then(data => {
-          if (data) {
+          if (data === "success") {
             this.props.onRouteChange("restauranthome");
           }
         });
@@ -51,7 +51,7 @@ class Template extends Component {
       })
         .then(response => response.json())
         .then(data => {
-          if (data) {
+          if (data === "success") {
             this.props.onRouteChange("restauranthome");
           }
         });
@@ -67,7 +67,7 @@ class Template extends Component {
       })
         .then(response => response.json())
         .then(data => {
-          if (data) {
+          if (data === "success") {
             this.props.onRouteChange("restauranthome");
           }
         });
