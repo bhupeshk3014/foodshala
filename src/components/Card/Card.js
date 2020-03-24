@@ -4,7 +4,7 @@ import "./Card.css";
 class Card extends Component {
   onViewChange = () => {
     let rest_id = this.props.id;
-    fetch(`http://localhost:3000/menu/${rest_id}/starter`)
+    fetch(`https://gentle-reef-95460.herokuapp.com/menu/${rest_id}/starter`)
       .then(response => {
         return response.json();
       })
@@ -13,7 +13,7 @@ class Card extends Component {
           this.props.loadStarter(starter);
         }
       });
-    fetch(`http://localhost:3000/menu/${rest_id}/maincourse`)
+    fetch(`https://gentle-reef-95460.herokuapp.com/menu/${rest_id}/maincourse`)
       .then(response => {
         return response.json();
       })
@@ -22,7 +22,7 @@ class Card extends Component {
           this.props.loadMainCourse(maincourse);
         }
       });
-    fetch(`http://localhost:3000/menu/${rest_id}/beverages`)
+    fetch(`https://gentle-reef-95460.herokuapp.com/menu/${rest_id}/beverages`)
       .then(response => {
         return response.json();
       })

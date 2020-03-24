@@ -4,13 +4,16 @@ class ScrollMenu extends Component {
   onOrderChange = props => {
     const { cust_id, rest_id, name } = this.props;
     const res_id = rest_id.rest_id;
-    fetch(`http://localhost:3000/order/${cust_id}/${res_id}`, {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: name
-      })
-    });
+    fetch(
+      `https://gentle-reef-95460.herokuapp.com/order/${cust_id}/${res_id}`,
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name
+        })
+      }
+    );
 
     this.props.onRouteChange("order");
   };

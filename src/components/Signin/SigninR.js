@@ -18,7 +18,7 @@ class SigninR extends Component {
   };
 
   onSubmitSignIn = () => {
-    fetch("http://localhost:3000/signin/register", {
+    fetch("https://gentle-reef-95460.herokuapp.com/signin/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

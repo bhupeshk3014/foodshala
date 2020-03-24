@@ -14,7 +14,9 @@ class Menu extends Component {
   onViewButtonChange = props => {
     const { rest_id, cust_id } = this.props;
     // const res_id = rest_id.rest_id;
-    fetch(`http://localhost:3000/vieworder/dishes/${rest_id}/${cust_id}`)
+    fetch(
+      `https://gentle-reef-95460.herokuapp.com/vieworder/dishes/${rest_id}/${cust_id}`
+    )
       .then(response => {
         return response.json();
       })

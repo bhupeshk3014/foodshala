@@ -24,15 +24,18 @@ class Template extends Component {
   onAddItem = props => {
     let { rest_id } = this.props;
     if (this.props.item === "Starters") {
-      fetch(`http://localhost:3000/additem/${rest_id}/starter`, {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          dish: this.state.dish,
-          type: this.state.type,
-          price: this.state.price
-        })
-      })
+      fetch(
+        `https://gentle-reef-95460.herokuapp.com/additem/${rest_id}/starter`,
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            dish: this.state.dish,
+            type: this.state.type,
+            price: this.state.price
+          })
+        }
+      )
         .then(response => response.json())
         .then(data => {
           if (data === "success") {
@@ -40,15 +43,18 @@ class Template extends Component {
           }
         });
     } else if (this.props.item === "Beverages") {
-      fetch(`http://localhost:3000/additem/${rest_id}/beverages`, {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          dish: this.state.dish,
-          type: this.state.type,
-          price: this.state.price
-        })
-      })
+      fetch(
+        `https://gentle-reef-95460.herokuapp.com/additem/${rest_id}/beverages`,
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            dish: this.state.dish,
+            type: this.state.type,
+            price: this.state.price
+          })
+        }
+      )
         .then(response => response.json())
         .then(data => {
           if (data === "success") {
@@ -56,15 +62,18 @@ class Template extends Component {
           }
         });
     } else {
-      fetch(`http://localhost:3000/additem/${rest_id}/maincourse`, {
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          dish: this.state.dish,
-          type: this.state.type,
-          price: this.state.price
-        })
-      })
+      fetch(
+        `https://gentle-reef-95460.herokuapp.com/additem/${rest_id}/maincourse`,
+        {
+          method: "post",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            dish: this.state.dish,
+            type: this.state.type,
+            price: this.state.price
+          })
+        }
+      )
         .then(response => response.json())
         .then(data => {
           if (data === "success") {

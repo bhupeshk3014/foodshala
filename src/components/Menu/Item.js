@@ -11,15 +11,18 @@ class Item extends Component {
   onAddChange = props => {
     const { cust_id, rest_id, dish, type, price } = this.props;
     const res_id = rest_id.rest_id;
-    fetch(`http://localhost:3000/addtocart/${cust_id}/${res_id}`, {
-      method: "post",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        dish: dish,
-        type: type,
-        price: price
-      })
-    });
+    fetch(
+      `https://gentle-reef-95460.herokuapp.com/addtocart/${cust_id}/${res_id}`,
+      {
+        method: "post",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          dish: dish,
+          type: type,
+          price: price
+        })
+      }
+    );
 
     this.setState({ selected: true });
   };

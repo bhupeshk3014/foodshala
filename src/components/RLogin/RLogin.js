@@ -3,7 +3,9 @@ import React, { Component } from "react";
 class RLogin extends Component {
   onViewOrderChange = props => {
     const { rest_id } = this.props;
-    fetch(`http://localhost:3000/vieworder/orderitem/${rest_id}`)
+    fetch(
+      `https://gentle-reef-95460.herokuapp.com/vieworder/orderitem/${rest_id}`
+    )
       .then(response => {
         return response.json();
       })

@@ -55,7 +55,7 @@ class RegisterR extends Component {
   };
 
   onSubmitRegisterR = () => {
-    fetch("http://localhost:3000/register/restaurant", {
+    fetch("https://gentle-reef-95460.herokuapp.com/register/restaurant", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

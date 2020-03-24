@@ -105,7 +105,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:3000/restaurant")
+    fetch("https://gentle-reef-95460.herokuapp.com/restaurant")
       .then(response => {
         return response.json();
       })
