@@ -4,7 +4,7 @@ import ViewOrder from "./ViewOrder";
 const ViewOrderList = ({ orderlist, rest_id }) => {
   if (orderlist.length) {
     const filterList = orderlist.filter((order, i) => {
-      return orderlist[i].restaurant_id === rest_id;
+      return orderlist[i].restaurant_id === `${rest_id}`;
     });
 
     if (filterList.length) {
